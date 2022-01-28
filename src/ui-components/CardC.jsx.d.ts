@@ -4,8 +4,10 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
-export { default as NavBar } from "./NavBar";
-export { default as CardC } from "./CardC";
-export { default as NewHomes } from "./NewHomes";
-export { default as MarketingFooter } from "./MarketingFooter";
-export { default as CardB } from "./CardB";
+import React from "react";
+import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { FlexProps } from "@aws-amplify/ui-react";
+export declare type CardCProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: EscapeHatchProps | undefined | null;
+}>;
+export default function CardC(props: CardCProps): React.ReactElement;

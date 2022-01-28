@@ -7,9 +7,9 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Image, Text } from "@aws-amplify/ui-react";
-export default function CardB(props) {
-  const { home, overrides: overridesProp, ...rest } = props;
+import { Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
+export default function CardC(props) {
+  const { overrides: overridesProp, ...rest } = props;
   const overrides = { ...overridesProp };
   return (
     <Flex
@@ -25,12 +25,11 @@ export default function CardB(props) {
     >
       <Image
         width="320px"
-        height="160px"
+        height="408px"
         shrink="0"
         alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
-        src={home?.image_url}
         {...getOverrideProps(overrides, "Flex.Image[0]")}
       ></Image>
       <Flex
@@ -66,14 +65,14 @@ export default function CardB(props) {
             alignSelf="stretch"
             position="relative"
             padding="0px 0px 0px 0px"
-            children={home?.price}
+            children="Classic Long Sleeve T-Shirt"
             {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[0]")}
           ></Text>
           <Text
             fontFamily="Inter"
             fontSize="16px"
             fontWeight="400"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
@@ -85,10 +84,44 @@ export default function CardB(props) {
             alignSelf="stretch"
             position="relative"
             padding="0px 0px 0px 0px"
-            children={home?.address}
+            children="Information about this product"
             {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[1]")}
           ></Text>
         </Flex>
+        <Rating
+          display="flex"
+          width="174px"
+          shrink="0"
+          size="default"
+          {...getOverrideProps(overrides, "Flex.Flex[0].Rating[0]")}
+        ></Rating>
+        <Text
+          fontFamily="Inter"
+          fontSize="32px"
+          fontWeight="700"
+          color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+          lineHeight="40px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          width="288px"
+          shrink="0"
+          alignSelf="stretch"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          children="$99 USD"
+          {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
+        ></Text>
+        <Button
+          display="flex"
+          shrink="0"
+          alignSelf="stretch"
+          size="large"
+          variation="primary"
+          children="Primary Button"
+          {...getOverrideProps(overrides, "Flex.Flex[0].Button[0]")}
+        ></Button>
       </Flex>
     </Flex>
   );
