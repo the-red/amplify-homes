@@ -5,7 +5,6 @@
  **************************************************************************/
 
 export { default as NavBar } from "./NavBar";
-export { default as CardC } from "./CardC";
 export { default as NewHomes } from "./NewHomes";
 export { default as MarketingFooter } from "./MarketingFooter";
 export { default as CardB } from "./CardB";
